@@ -1,0 +1,64 @@
+{
+    "$id": "https://casimir.co/event.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Event",
+    "type": "object",
+    "properties": {
+        "chain": {
+            "type": "string",
+            "description": "The chain which the event belongs to (e.g. iotex, ethereum)"
+        },
+        "network": {
+            "type": "string",
+            "description": "The network which the event was received on (e.g. mainnet, testnet)"
+        },
+        "provider": {
+            "type": "string",
+            "description": "The provider used to source the event (e.g. infura, consensus)"
+        },
+        "type": {
+            "type": "string",
+            "description": "The type of event (e.g. block, transaction)"
+        },
+        "height": {
+            "type": "integer",
+            "description": "The height of the block the event belongs to"
+        },
+        "block": {
+            "type": "string",
+            "description": "The block hash"
+        },
+        "transaction": {
+            "type": "string",
+            "description": "The transaction hash"
+        },
+        "received_at": {
+            "type": "string",
+            "description": "The timestamp of the event recieved by the blockchain (format: Modified ISO 8601 e.g. 2015-03-04 22:44:30.652)"
+        },
+        "sender": {
+            "type": "string",
+            "description": "The sender's address"
+        },
+        "recipient": {
+            "type": "string",
+            "description": "The recipient's address"
+        },
+        "sender_balance": {
+            "type": "string",
+            "description": "The sender's balance at the time of the event"
+        },
+        "recipient_balance": {
+            "type": "string",
+            "description": "The recipient's balance at the time of the event"
+        },
+        "amount": {
+            "type": "string",
+            "description": "The amount transferred in the event"
+        },
+        "price": {
+            "type": "string",
+            "description": "The exchange price of the coin at the time of the event"
+        }
+    }
+}
