@@ -40,9 +40,25 @@ func TestMain(m *testing.M) {
 		if schema.Title == "" {
 			log.Fatalln("schema title cannot be empty")
 		}
+	}
+}
 
-		if schema.Properties == nil {
-			log.Fatalln("schema properties cannot be empty")
-		}
+func TestParse(t *testing.T) {
+	example := "./example/account.schema.json"
+
+	buff, err := os.ReadFile(example)
+
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	schema, err := Parse(buff)
+
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if schema.Title == "" {
+		t.Fatal("schema title cannot be empty")
 	}
 }

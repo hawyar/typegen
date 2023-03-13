@@ -1,4 +1,4 @@
-.PHONY: test build clean
+.PHONY: test build
 
 os = $(shell go env GOOS)
 arch = $(shell go env GOARCH)

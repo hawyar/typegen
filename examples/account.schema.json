@@ -22,20 +22,56 @@
         },
         "snapshots": {
             "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "balance": {
+                        "type": "number",
+                        "description": "The account balance"
+                    },
+                    "date": {
+                        "type": "string",
+                        "description": "The account snapshot date in ISO 8601 format"
+                    }
+                },
+                "required": ["balance","date"]
+            },
             "description": "The account snapshots"
         },
         "transactions": {
             "type": "array",
-            "description": "The account transactions"
+            "description": "The account transactions",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "amount": {
+                        "type": "string",
+                        "description": "The transaction amount"
+                    },
+                    "date": {
+                        "type": "string",
+                        "description": "The transaction date in ISO 8601 format"
+                    },
+                    "hash": {
+                        "type": "string",
+                        "description": "The transaction hash"
+                    },
+                    "sender": {
+                        "type": "string",
+                        "description": "The transaction sender address"
+                    },
+                    "recipient": {
+                        "type": "string",
+                        "description": "The transaction recipient address"
+                    }
+                },
+                "required": ["amount","date","hash","sender","recipient"]
+            }
         },
         "wallet": {
             "type": "string",
             "description": "The account wallet provider"
         }
     },
-    "required": [
-        "address",
-        "owner_address",
-        "wallet"
-    ]
+    "required": ["address","owner_address","wallet"]
 }

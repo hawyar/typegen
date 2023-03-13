@@ -1,7 +1,5 @@
-Generate TS declaration files `.d.ts` from JSON Schema
+Given a JSON Schema file: `user.schema.json`
 
-
-Input: user.schema.json
 ```json
 {
   "title": "User",
@@ -21,16 +19,19 @@ Input: user.schema.json
 }
 ```
 
+Run typegen
+
 ```bash
 typegen user.schema.json
 ```
 
-Output:
+Outputs a declaration file: `User.d.ts`
+
 ```typescript
 export interface User {
-	name?: string;
-	age?: number;
-	id: string;
+  name?: string;
+  age?: number;
+  id: string;
 }
 ```
 
