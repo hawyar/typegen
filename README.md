@@ -1,4 +1,4 @@
-### typepgen
+### typegen
 
 > Generate typescript declaration file from JSON Schema
 
