@@ -1,4 +1,8 @@
-Given a JSON Schema file: `user.schema.json`
+### typepgen
+
+> Generate typescript declaration file from JSON Schema
+
+Given: `user.schema.json`
 
 ```json
 {
@@ -18,14 +22,13 @@ Given a JSON Schema file: `user.schema.json`
   "required": ["id"]
 }
 ```
-
 Run typegen
 
 ```bash
 typegen user.schema.json
 ```
 
-Outputs a declaration file: `User.d.ts`
+Outputs declaration file: `User.d.ts`
 
 ```typescript
 export interface User {
@@ -33,6 +36,13 @@ export interface User {
   age?: number;
   id: string;
 }
+
+## Build
+  
+```bash
+make build
+```
+
 ```
 
 
